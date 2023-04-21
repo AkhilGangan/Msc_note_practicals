@@ -1,0 +1,16 @@
+library(igraph)
+g<-graph.formula(1-2,1-3,2-3,2-4,3-5,4-5,4-6,4-7,5-6,6-7)
+plot(g)
+ecount(g)
+vcount(g)
+degree(g)
+dg<-graph.formula(1-+2,1-+3,2++3)
+plot(dg)
+degree(dg,mode = "in")
+degree(dg,mode = "out")
+V(dg)$name[degree(dg)==min(degree(dg))]
+V(dg)$name[degree(dg)==max(degree(dg))]
+neighbors(g,5)
+neighbors(g,2)
+get.adjlist(dg)
+get.adjacency(g)
